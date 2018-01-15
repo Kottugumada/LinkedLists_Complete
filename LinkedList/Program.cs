@@ -30,6 +30,9 @@ namespace LinkedList
 
             lList.AddLast(6,lList.Head);
             lList.PrintNodes(lList.Head);
+
+            lList.AddFirst(8,lList.Head);
+            lList.PrintNodes(lList.Head );
         }
         public void PrintNodes(Node node)
         {
@@ -59,9 +62,15 @@ namespace LinkedList
         }
         public void AddFirst(object valueToBeAdded, Node node)
         {
-            if (true)
+            if (node.Value == null)
             {
-
+                Node newNode = new Node(valueToBeAdded);
+                newNode.Next = node;
+            }
+            else
+            {
+                Node newNode = new Node(valueToBeAdded);
+                newNode.Next = node;
             }
         }
     }
